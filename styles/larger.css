@@ -1,0 +1,32 @@
+@media (min-width: 48rem) {
+    .menu-btn {
+        display: none;
+    }
+
+    .site-nav {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        padding: 0;
+        border: 0;
+    }
+
+    .site-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .site-main {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    .courses {
+        grid-column: 1 / -1;
+    }
+
+    .about {
+    grid-column: 1 / -1;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+}

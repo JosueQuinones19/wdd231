@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WDD 231 – Course Home Page – Josue Quiñones</title>
+    <meta name="description"
+        content="WDD 231 course home page with resources, navigation, and a dynamic course list with filtering and credit totals.">
+    <meta name="author" content="Josue Quiñones">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <img src="images/logo.svg" alt="Site logo" width="48" height="48">
+            <span class="site-name">Josue Quiñones</span>
+        </div>
+
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+            <span class="menu-icon" aria-hidden="true">☰</span>
+        </button>
+
+        <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="chamber/">Chamber</a>
+            <a class="nav-link" href="final/">Final</a>
+        </nav>
+    </header>
+
+    <main class="site-main">
+        <h1>Home</h1>
+
+        <section class="card about">
+            <h2>About Me</h2>
+            <p>
+                My name is Josue Quiñones, and I am a student at BYU Pathway Worldwide. I am currently pursuing a degree
+                in Software Development with a focus on web development. I have a passion for creating user-friendly and
+                visually appealing websites. In my free time, I enjoy hiking, working out, and exploring new
+                technologies.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Me</h2>
+            <img class="profile-photo" src="images/profile.webp" alt="Photo of the student" width="600" height="600"
+                loading="lazy">
+        </section>
+
+        <section class="card courses">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="filters" role="group" aria-label="Course filters">
+                <button type="button" class="filter-btn" data-filter="all">All</button>
+                <button type="button" class="filter-btn" data-filter="cse">CSE</button>
+                <button type="button" class="filter-btn" data-filter="wdd">WDD</button>
+            </div>
+
+            <div id="courseList" class="course-list" aria-live="polite"></div>
+
+            <p class="credits">
+                The total credits for courses listed above is <strong id="creditTotal">0</strong>.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="social">
+            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a>
+        </div>
+
+        <p class="meta">
+            &copy; <span id="currentyear"></span> Josue Quiñones • Utah, USA
+        </p>
+
+        <p id="lastModified" class="meta"></p>
+    </footer>
+</body>
+
+</html>
