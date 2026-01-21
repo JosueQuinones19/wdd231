@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chamber Directory | Your City Chamber of Commerce</title>
+    <meta name="description"
+        content="Business member directory for the Your City Chamber of Commerce. Browse members and switch between grid and list views." />
+    <meta name="author" content="Josue Quiñones" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Your City Chamber Directory" />
+    <meta property="og:description" content="Explore local chamber members and discover businesses in our community." />
+    <meta property="og:image" content="https://username.github.io/wdd231/chamber/images/og-directory.jpg" />
+    <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" />
+
+    <!-- CSS (normalize first) -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <!-- JS -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <a href="index.html" class="brand-link">
+                <img src="images/chamber-logo.png" alt="Your City Chamber of Commerce logo" width="48" height="48" />
+                <div>
+                    <p class="brand-name">Your City</p>
+                    <p class="brand-tagline">Chamber of Commerce</p>
+                </div>
+            </a>
+        </div>
+
+        <button id="menuButton" class="menu-button" aria-label="Open menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="site-nav">
+            <ul id="navList" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html" aria-current="page">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page">
+        <h1>Member Directory</h1>
+
+        <section class="directory-controls" aria-label="Directory view controls">
+            <button id="gridBtn" type="button" class="view-btn" aria-pressed="true">Grid</button>
+            <button id="listBtn" type="button" class="view-btn" aria-pressed="false">List</button>
+        </section>
+
+        <section id="members" class="members grid" aria-label="Chamber members"></section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <section>
+                <h2 class="footer-title">Contact</h2>
+                <p>Your City Chamber of Commerce</p>
+                <p>123 Main St, Your City, ST 84000</p>
+                <p>(801) 555-1234</p>
+                <p><a href="mailto:info@yourcitychamber.org">info@yourcitychamber.org</a></p>
+            </section>
+
+            <section>
+                <h2 class="footer-title">Development</h2>
+                <p>&copy; <span id="currentYear"></span> Your City Chamber</p>
+                <p>Josue Quiñones | WDD 231</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

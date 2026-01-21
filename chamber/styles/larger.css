@@ -1,0 +1,41 @@
+@media only screen and (min-width: 32rem) {
+    .site-header {
+        grid-template-columns: auto 1fr;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .site-nav {
+        grid-column: auto;
+        justify-self: end;
+    }
+
+    .nav-list {
+        display: flex;
+        gap: 0.25rem;
+        border: none;
+        margin: 0;
+    }
+
+    .nav-list a {
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+    }
+
+    .members.grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+
+@media only screen and (min-width: 64rem) {
+    .members.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
