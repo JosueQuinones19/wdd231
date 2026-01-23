@@ -1,76 +1,58 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* normalize.css (simple reset for course validation) */
 
-/* Document
-   ========================================================================== */
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
+/* Base document */
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
 }
 
-/* Sections
-   ========================================================================== */
-
+/* Body */
 body {
     margin: 0;
 }
 
-/* Grouping content
-   ========================================================================== */
-
-hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
+/* Media */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
 }
 
-/* Text-level semantics
-   ========================================================================== */
-
-pre {
-    font-family: monospace, monospace;
-    font-size: 1em;
-}
-
-/* Embedded content
-   ========================================================================== */
-
-img {
-    border-style: none;
-}
-
-/* Forms
-   ========================================================================== */
-
-button,
+/* Form elements */
 input,
-optgroup,
-select,
-textarea {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Lists */
+ul,
+ol {
+    padding: 0;
     margin: 0;
 }
 
-button,
-input {
-    overflow: visible;
+/* Links */
+a {
+    text-decoration: none;
 }
 
-button,
-select {
-    text-transform: none;
+/* Headings and paragraphs */
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
 }
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-    -webkit-appearance: button;
-}
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-
