@@ -269,6 +269,10 @@ h1 {
     min-width: 4ch;
 }
 
+.members.list img {
+    display: none;
+}
+
 #lastModified {
     display: inline-block;
     min-width: 24ch;
