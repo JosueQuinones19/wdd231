@@ -5,7 +5,9 @@
     --text: #1b1b1b;
     --muted: #4b5563;
     --primary: #0b4f6c;
+    /* deep blue */
     --accent: #f6ae2d;
+    /* warm accent */
     --card: #f4f6f8;
     --border: #d9dee3;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
@@ -98,10 +100,9 @@ h1 {
 
 .site-nav {
     grid-column: 1 / -1;
-    min-height: 0;
 }
 
-/* Mobile nav hidden by default; JS toggles .open on #navList */
+/* mobile nav is hidden by default; JS toggles .open on #navList */
 .nav-list {
     list-style: none;
     padding: 0;
@@ -166,6 +167,7 @@ h1 {
     gap: 1rem;
 }
 
+/* mobile default: 1 column grid */
 .members.grid {
     grid-template-columns: 1fr;
 }
@@ -192,19 +194,24 @@ h1 {
     word-break: break-word;
 }
 
-/* Keep image quality + reserve space (CLS) */
+/* Stable layout WITHOUT forcing a fixed height (better image quality) */
 .member-card img {
     width: 100%;
     aspect-ratio: 3 / 2;
+    /* reserves space -> reduces CLS */
     height: auto;
+    /* keeps natural rendering */
     object-fit: contain;
+    /* keeps logos intact */
     background: #fff;
     border: 1px solid var(--border);
     border-radius: 0.6rem;
     padding: 0.25rem;
+    /* smaller padding = sharper look */
 }
 
-/* List view */
+
+/* List view layout */
 .members.list {
     grid-template-columns: 1fr;
 }
@@ -219,11 +226,7 @@ h1 {
 .members.list .member-card img {
     width: 90px;
     height: 90px;
-    object-fit: contain;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 0.6rem;
-    padding: 0.25rem;
+    padding: 0.35rem;
 }
 
 /* ---------- Footer ---------- */
@@ -254,15 +257,4 @@ h1 {
 
 .site-footer a {
     color: var(--primary);
-}
-
-/* CLS FIX: Reserve space for footer dynamic text */
-#currentYear {
-    display: inline-block;
-    min-width: 4ch;
-}
-
-#lastModified {
-    display: inline-block;
-    min-width: 24ch;
 }
