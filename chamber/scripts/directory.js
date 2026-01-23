@@ -2,7 +2,8 @@ const membersContainer = document.querySelector("#members");
 const gridBtn = document.querySelector("#gridBtn");
 const listBtn = document.querySelector("#listBtn");
 
-const dataUrl = "data/members.json";
+/* Cache-busting prevents GitHub Pages/browser from reusing an old JSON response */
+const dataUrl = "data/members.json?v=6";
 
 function membershipLabel(level) {
   if (level === 3) return "Gold";
@@ -10,18 +11,26 @@ function membershipLabel(level) {
   return "Member";
 }
 
-function createMemberCard(member) {
+function createMemberCard(member, isFirst = false) {
   const card = document.createElement("article");
   card.classList.add("member-card");
 
   const img = document.createElement("img");
   img.src = `images/${member.image}`;
   img.alt = `${member.name} logo`;
-  img.loading = "lazy";
 
-  /* ✅ CLS FIX: Reserve image space to prevent layout shifts */
+  // Reserve space to reduce layout shifts (CLS)
   img.width = 300;
   img.height = 200;
+  img.decoding = "async";
+
+  // LCP optimization: do NOT lazy-load the first (likely LCP) image
+  if (isFirst) {
+    img.loading = "eager";
+    img.fetchPriority = "high";
+  } else {
+    img.loading = "lazy";
+  }
 
   const name = document.createElement("h2");
   name.textContent = member.name;
@@ -67,8 +76,8 @@ async function getMembers() {
 
 function displayMembers(members) {
   membersContainer.innerHTML = "";
-  members.forEach((member) => {
-    membersContainer.appendChild(createMemberCard(member));
+  members.forEach((member, index) => {
+    membersContainer.appendChild(createMemberCard(member, index === 0));
   });
 }
 
