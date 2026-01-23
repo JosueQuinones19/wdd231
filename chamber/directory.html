@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/small.css" />
     <link rel="stylesheet" href="styles/larger.css" />
+    <link rel="preload" as="image" href="images/chamber-logo.jpg">
+
 
     <!-- JS -->
     <script src="scripts/navigation.js" defer></script>
@@ -35,7 +37,9 @@
     <header class="site-header">
         <div class="brand">
             <a href="index.html" class="brand-link">
-                <img src="images/chamber-logo.jpg" alt="Lehi City Chamber of Commerce logo" width="48" height="48" />
+                <img src="images/chamber-logo.jpg" alt="Lehi City Chamber of Commerce logo" width="48" height="48" loading="eager"
+                    fetchpriority="high" decoding="async" />
+
                 <div>
                     <p class="brand-name">Lehi City</p>
                     <p class="brand-tagline">Lehi City Chamber of Commerce</p>
