@@ -18,6 +18,8 @@ function createMemberCard(member) {
   img.src = `images/${member.image}`;
   img.alt = `${member.name} logo`;
   img.loading = "lazy";
+
+  /* ✅ CLS FIX: Reserve image space to prevent layout shifts */
   img.width = 300;
   img.height = 200;
 

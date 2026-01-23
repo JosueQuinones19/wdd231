@@ -17,11 +17,16 @@
         gap: 0.25rem;
         border: none;
         margin: 0;
+        align-items: center;
     }
 
     .nav-list a {
         border: 1px solid var(--border);
         border-radius: 0.5rem;
+        border-top: none;
+        /* overrides mobile vertical borders */
+        white-space: nowrap;
+        /* prevents ugly wrapping */
     }
 
     .members.grid {

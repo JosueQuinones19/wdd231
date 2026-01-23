@@ -1,67 +1,67 @@
 {
   "members": [
     {
-      "name": "Blue Ridge Coffee",
-      "address": "145 Canyon Rd, Your City, ST 84000",
-      "phone": "(801) 555-1101",
-      "website": "https://example.com/blue-ridge-coffee",
-      "image": "blue-ridge-coffee.png",
+      "name": "Noodles & Company",
+      "address": "3601 Digital Dr #204, Lehi, UT 84043",
+      "phone": "(801) 478-3234",
+      "website": "https://www.noodles.com",
+      "image": "noodles-company.jpg",
       "membershipLevel": 3,
-      "description": "Local coffee roaster and cafe serving the community."
+      "description": "Fast-casual restaurant serving noodle and pasta dishes from around the world."
     },
     {
-      "name": "Summit Tech Repair",
-      "address": "22 Market St, Your City, ST 84000",
-      "phone": "(801) 555-1102",
-      "website": "https://example.com/summit-tech-repair",
-      "image": "summit-tech-repair.png",
+      "name": "A Plus Garage Door Repair",
+      "address": "4275 N Thanksgiving Way Suite 200B, Lehi, UT 84043",
+      "phone": "(801) 385-6785",
+      "website": "https://aplusgaragedoorutah.com",
+      "image": "a-plus-garage-door.jpg",
       "membershipLevel": 2,
-      "description": "Computer and phone repair with same-day service."
+      "description": "Professional garage door repair and installation services for residential and commercial customers."
     },
     {
-      "name": "Desert Bloom Florals",
-      "address": "310 Rose Ave, Your City, ST 84000",
-      "phone": "(801) 555-1103",
-      "website": "https://example.com/desert-bloom-florals",
-      "image": "desert-bloom-florals.png",
-      "membershipLevel": 1,
-      "description": "Custom floral arrangements and event decor."
-    },
-    {
-      "name": "Mountain View Fitness",
-      "address": "500 Peak Blvd, Your City, ST 84000",
-      "phone": "(801) 555-1104",
-      "website": "https://example.com/mountain-view-fitness",
-      "image": "mountain-view-fitness.png",
-      "membershipLevel": 2,
-      "description": "Personal training and group classes for all levels."
-    },
-    {
-      "name": "Oak & Stone Construction",
-      "address": "88 Builder Ln, Your City, ST 84000",
-      "phone": "(801) 555-1105",
-      "website": "https://example.com/oak-stone-construction",
-      "image": "oak-stone-construction.png",
+      "name": "Hadco Construction",
+      "address": "1450 W 1850 N, Lehi, UT 84043",
+      "phone": "(801) 555-2103",
+      "website": "https://hadcoconstruction.com",
+      "image": "hadco-construction.jpg",
       "membershipLevel": 3,
-      "description": "Residential remodeling and commercial build-outs."
+      "description": "Commercial construction company specializing in industrial and office developments."
     },
     {
-      "name": "Sunset Dental Care",
-      "address": "19 Health Dr, Your City, ST 84000",
-      "phone": "(801) 555-1106",
-      "website": "https://example.com/sunset-dental-care",
-      "image": "sunset-dental-care.png",
-      "membershipLevel": 1,
-      "description": "Family dentistry with modern care and friendly staff."
+      "name": "K9 Sport Sack",
+      "address": "1603 N State St, Lehi, UT 84043",
+      "phone": "(385) 237-5644",
+      "website": "https://www.k9sportsack.com",
+      "image": "k9-sport-sack.jpg",
+      "membershipLevel": 3,
+      "description": "Innovative dog carrier backpacks designed for outdoor adventures."
     },
     {
-      "name": "Riverbend Market",
-      "address": "742 River St, Your City, ST 84000",
-      "phone": "(801) 555-1107",
-      "website": "https://example.com/riverbend-market",
-      "image": "riverbend-market.png",
+      "name": "Scorez Sports Bar",
+      "address": "571 W State St, Lehi, UT 84043",
+      "phone": "(385) 743-9834",
+      "website": "https://scorezsportsbar.com",
+      "image": "scorez-sports-bar.jpg",
+      "membershipLevel": 2,
+      "description": "Local sports bar offering food, drinks, and live sports entertainment."
+    },
+    {
+      "name": "Action Auto Utah",
+      "address": "170 W State St, Lehi, UT 84043",
+      "phone": "(801) 978-2106",
+      "website": "https://actionautoutah.com",
+      "image": "action-auto-utah.jpg",
       "membershipLevel": 1,
-      "description": "Fresh produce, local goods, and weekly specials."
+      "description": "Automotive repair and maintenance services with a focus on quality and trust."
+    },
+    {
+      "name": "Edna's Market & Grille - Lehi",
+      "address": "380 N 850 E, Lehi, UT 84043",
+      "phone": "(801) 565-7885",
+      "website": "https://ednasmarket.com",
+      "image": "ednas-market-grille.jpg",
+      "membershipLevel": 1,
+      "description": "Neighborhood market and grille serving fresh meals and local favorites."
     }
   ]
 }
