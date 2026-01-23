@@ -100,6 +100,7 @@ h1 {
 
 .site-nav {
     grid-column: 1 / -1;
+    min-height: 0;
 }
 
 /* mobile nav is hidden by default; JS toggles .open on #navList */
@@ -210,7 +211,6 @@ h1 {
     /* smaller padding = sharper look */
 }
 
-
 /* List view layout */
 .members.list {
     grid-template-columns: 1fr;
@@ -226,7 +226,11 @@ h1 {
 .members.list .member-card img {
     width: 90px;
     height: 90px;
-    padding: 0.35rem;
+    object-fit: contain;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+    padding: 0.25rem;
 }
 
 /* ---------- Footer ---------- */
@@ -257,4 +261,15 @@ h1 {
 
 .site-footer a {
     color: var(--primary);
+}
+
+/* ---- CLS FIX: reserve space for footer dynamic text ---- */
+#currentYear {
+    display: inline-block;
+    min-width: 4ch;
+}
+
+#lastModified {
+    display: inline-block;
+    min-width: 24ch;
 }
