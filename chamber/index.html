@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lehi City Chamber of Commerce | Home</title>
+    <meta name="description"
+        content="Welcome to the Lehi City Chamber of Commerce. Discover events, local business spotlights, and current weather in Lehi, Utah.">
+    <meta name="author" content="Josue Quiñones">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lehi City Chamber of Commerce | Home">
+    <meta property="og:description"
+        content="Explore local events, weather, and featured chamber members in Lehi, Utah.">
+    <meta property="og:image" content="https://josuequinones19.github.io/wdd231/chamber/images/og-home.webp">
+    <meta property="og:url" content="https://josuequinones19.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts (required) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JS -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <a href="index.html" class="brand-link">
+                <img src="images/chamber-logo.jpg" alt="Lehi City Chamber of Commerce logo" width="48" height="48"
+                    loading="eager" decoding="async">
+                <div>
+                    <p class="brand-name">Lehi City</p>
+                    <p class="brand-tagline">Lehi City Chamber of Commerce</p>
+                </div>
+            </a>
+        </div>
+
+        <button id="menuButton" class="menu-button" aria-label="Open menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="site-nav">
+            <ul id="navList" class="nav-list">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page">
+        <!-- HERO -->
+        <section class="hero" aria-label="Hero">
+            <picture>
+                <!-- Cambia estos nombres si tu hero se llama diferente -->
+                <source srcset="images/hero-large.jpg" media="(min-width: 768px)">
+                <img src="images/hero-small.jpg" alt="Lehi City community and local businesses" width="1200"
+                    height="600" loading="lazy" decoding="async">
+            </picture>
+
+            <div class="hero-content">
+                <h1>Lehi City Chamber of Commerce</h1>
+                <p>Connect local businesses. Support growth. Strengthen community.</p>
+                <a class="cta-link" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- HOME CONTENT -->
+        <div class="home-grid">
+            <!-- CURRENT EVENTS -->
+            <section class="card events" aria-label="Current events">
+                <h2>Current Events</h2>
+                <ul>
+                    <li><strong>Networking Breakfast</strong> — Monthly meetup for members.</li>
+                    <li><strong>Local Business Workshop</strong> — Resources for small businesses.</li>
+                    <li><strong>Community Spotlight</strong> — Featuring Lehi businesses.</li>
+                </ul>
+            </section>
+
+            <!-- WEATHER -->
+            <section class="card weather" aria-label="Weather in Lehi">
+                <h2>Weather</h2>
+
+                <div class="weather-now">
+                    <p class="temp">
+                        <span id="current-temp">--</span><span id="temp-unit">°F</span>
+                    </p>
+                    <p id="weather-desc">Loading...</p>
+                </div>
+
+                <h3>3-Day Forecast</h3>
+                <ul id="forecast" class="forecast" aria-label="Three day forecast"></ul>
+            </section>
+
+            <!-- SPOTLIGHTS -->
+            <section class="card spotlights" aria-label="Member spotlights">
+                <h2>Member Spotlights</h2>
+                <div id="spotlight-container" class="spotlight-grid"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <section>
+                <h2 class="footer-title">Contact</h2>
+                <p>Lehi City Chamber of Commerce</p>
+                <p>123 Main St, Lehi City, UT 84000</p>
+                <p>(801) 555-1234</p>
+                <p><a href="mailto:info@lehi-city-chamber.org">info@lehi-city-chamber.org</a></p>
+            </section>
+
+            <section>
+                <h2 class="footer-title">Development</h2>
+                <p>&copy; <span id="currentYear"></span> Lehi City Chamber</p>
+                <p>Josue Quiñones | WDD 231</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>
