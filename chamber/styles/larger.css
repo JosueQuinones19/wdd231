@@ -1,8 +1,6 @@
 /* larger.css - Lehi City Chamber of Commerce (larger views) */
 
 @media only screen and (min-width: 32rem) {
-
-    /* Header / Nav */
     .site-header {
         grid-template-columns: auto 1fr;
     }
@@ -25,41 +23,33 @@
     }
 
     .nav-list a {
-        border: 1px solid var(--border);
+        border: 1px solid #d9dee3;
         border-radius: 0.5rem;
         border-top: none;
-        /* overrides mobile vertical borders */
         white-space: nowrap;
-        /* prevents ugly wrapping */
     }
 
-    /* Home layout */
     .home-grid {
         grid-template-columns: 2fr 1fr;
         align-items: start;
     }
 
-    /* Make spotlights span full width below the first row */
     .spotlights {
         grid-column: 1 / -1;
     }
 
-    /* Spotlight cards in columns on larger views */
     .spotlight-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* Hero spacing: give the content a bit more room on wider screens */
     .hero-content {
         padding: 1.25rem;
     }
 
-    /* Directory members grid */
     .members.grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Footer */
     .footer-columns {
         grid-template-columns: 1fr 1fr;
         align-items: start;
@@ -67,13 +57,10 @@
 }
 
 @media only screen and (min-width: 64rem) {
-
-    /* Directory members grid */
     .members.grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* Optional: slightly larger hero text on big screens */
     .hero-content h1 {
         font-size: 2rem;
     }
