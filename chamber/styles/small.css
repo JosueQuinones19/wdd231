@@ -135,6 +135,7 @@ h1 {
     overflow: hidden;
     border: 1px solid #d9dee3;
     background: #000000;
+    color: #ffffff;
 }
 
 .hero picture img {
@@ -222,9 +223,7 @@ h1 {
     margin: 0.4rem 0;
     color: #4b5563;
 }
-.hero {
-    color: #ffffff;
-}
+
 
 /* Weather */
 .weather-now {
