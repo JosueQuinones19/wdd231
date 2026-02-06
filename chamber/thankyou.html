@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Lehi City Chamber</title>
+    <title>Thank You | Lehi Chamber</title>
     <meta name="description"
         content="Thank you for applying to the Lehi Chamber of Commerce. We have received your information.">
     <meta name="author" content="Josue Quiñones Sigala">
@@ -22,8 +22,10 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-
     <link rel="icon" href="favicon.ico">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
 </head>
 
 <body>
@@ -77,28 +79,19 @@
         </p>
     </footer>
 
-    <script src="scripts/getdates.js"></script>
-    <script src="scripts/navigation.js"></script>
-
     <script>
-        // Obtenemos la URL actual
         const currentUrl = window.location.href;
         const resultsContainer = document.querySelector('#results');
-
-        // Dividimos la URL para ver si hay datos
         const urlParts = currentUrl.split('?');
 
         if (urlParts.length > 1) {
-            // Usamos URLSearchParams (Método moderno y robusto)
             const params = new URLSearchParams(urlParts[1]);
 
             function show(key) {
-                // params.get() decodifica automáticamente los espacios y símbolos
                 const value = params.get(key);
                 return value ? value : "Not Provided";
             }
 
-            // Inyectamos los datos en el HTML
             resultsContainer.innerHTML = `
                 <p><strong>First Name:</strong> ${show("fname")}</p>
                 <p><strong>Last Name:</strong> ${show("lname")}</p>
@@ -108,7 +101,6 @@
                 <p><strong>Application Date:</strong> ${show("timestamp")}</p>
             `;
         } else {
-            // Mensaje si el usuario entra directo a thankyou.html sin llenar el formulario
             resultsContainer.innerHTML = `<p style="color:red;">No application data found. Please complete the form on the Join page first.</p>`;
         }
     </script>
