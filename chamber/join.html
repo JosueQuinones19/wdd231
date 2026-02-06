@@ -7,16 +7,22 @@
     <title>Join the Lehi City Chamber | Membership Application</title>
     <meta name="description" content="Join our Chamber of Commerce. Membership application page.">
     <meta name="author" content="Josue Quiñones Sigala">
+
     <meta property="og:title" content="Join the Lehi Chamber | Membership Application">
     <meta property="og:description"
         content="Join the Lehi Chamber of Commerce to grow your network, access exclusive resources, and boost your local business visibility. Apply today!">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://josuequinones19.github.io/wdd231/chamber/images/chamber-logo">
+    <meta property="og:image" content="https://josuequinones19.github.io/wdd231/chamber/images/chamber-logo.jpg">
     <meta property="og:url" content="https://josuequinones19.github.io/wdd231/chamber/join.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+
     <link rel="icon" href="favicon.ico">
 </head>
 
@@ -24,7 +30,7 @@
 
     <header class="site-header">
         <a href="index.html" class="brand-link">
-            <img src="images/chamber-logo.jpg" alt="Chamber Logo" width="50" height="50">
+            <img src="images/chamber-logo.jpg" alt="Lehi Chamber Logo" width="50" height="50">
             <div>
                 <p class="brand-name">Lehi Chamber</p>
                 <p class="brand-tagline">Connecting Business</p>
@@ -66,11 +72,13 @@
                     </label>
 
                     <label>Email Address*
-                        <input type="email" name="email" required autocomplete="email" placeholder="example@domain.com">
+                        <input type="email" name="email" required autocomplete="email" placeholder="example@domain.com"
+                            title="Please enter a valid email address">
                     </label>
 
                     <label>Mobile Phone*
-                        <input type="tel" name="phone" required autocomplete="tel">
+                        <input type="tel" name="phone" required autocomplete="tel"
+                            title="Please enter your mobile phone number">
                     </label>
                 </fieldset>
 
@@ -78,11 +86,12 @@
                     <legend>Membership & Organization</legend>
 
                     <label>Business/Organization Name*
-                        <input type="text" name="business" required autocomplete="organization">
+                        <input type="text" name="business" required autocomplete="organization"
+                            title="Please enter your business or organization name">
                     </label>
 
                     <label>Membership Level*
-                        <select name="membership" required>
+                        <select name="membership" required title="Select a membership level">
                             <option value="" disabled selected>Select a Level...</option>
                             <option value="np">NP Membership (No Fee)</option>
                             <option value="bronze">Bronze Membership</option>
@@ -108,19 +117,19 @@
                 <p>Non-Profit Organizations</p>
                 <button type="button" class="card-action" data-level="np">Learn More</button>
             </div>
-        
+
             <div class="card">
                 <h2>Bronze Membership</h2>
                 <p>Small Business Starter</p>
                 <button type="button" class="card-action" data-level="bronze">Learn More</button>
             </div>
-        
+
             <div class="card">
                 <h2>Silver Membership</h2>
                 <p>Growth & Visibility</p>
                 <button type="button" class="card-action" data-level="silver">Learn More</button>
             </div>
-        
+
             <div class="card">
                 <h2>Gold Membership</h2>
                 <p>Premium Executive Tier</p>
