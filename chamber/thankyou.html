@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Lehi Chamber</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="brand-link">
+            <img src="images/chamber-logo.jpg" alt="Chamber Logo" width="50" height="50">
+            <div>
+                <p class="brand-name">Lehi Chamber</p>
+            </div>
+        </a>
+        <button id="menuButton" class="menu-button">☰</button>
+        <nav class="site-nav">
+            <ul id="navList" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page thankyou-content">
+        <h1>Thank You for Joining!</h1>
+        <p>We have received your application. Here is a summary of the information you submitted:</p>
+
+        <div id="results"
+            style="background: #f4f6f8; padding: 20px; border-radius: 8px; text-align: left; margin-top: 20px;">
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentYear"></span> Josue | WDD 231 Project</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/navigation.js"></script>
+
+    <script>
+        const currentUrl = window.location.href;
+        const results = document.querySelector('#results');
+
+        const formData = currentUrl.split('?')[1].split('&');
+
+        function show(key) {
+            let result = "";
+            formData.forEach((element) => {
+                if (element.startsWith(key)) {
+                    result = element.split('=')[1]
+                        .replace(/%40/g, "@")
+                        .replace(/\+/g, " ")
+                        .replace(/%28/g, "(")
+                        .replace(/%29/g, ")");
+                    result = decodeURIComponent(result);
+                }
+            });
+            return result;
+        }
+
+        if (results) {
+            results.innerHTML = `
+                <p><strong>First Name:</strong> ${show("fname")}</p>
+                <p><strong>Last Name:</strong> ${show("lname")}</p>
+                <p><strong>Email:</strong> ${show("email")}</p>
+                <p><strong>Phone:</strong> ${show("phone")}</p>
+                <p><strong>Business:</strong> ${show("business")}</p>
+                <p><strong>Date Submitted:</strong> ${show("timestamp")}</p>
+            `;
+        }
+    </script>
+</body>
+
+</html>

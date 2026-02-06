@@ -1,5 +1,8 @@
 /* small.css - Lehi City Chamber of Commerce (mobile-first) */
 
+/* =========================================
+   1. GLOBAL & RESET
+   ========================================= */
 *,
 *::before,
 *::after {
@@ -38,9 +41,13 @@ a:hover {
 h1 {
     margin: 0.25rem 0 0.75rem;
     font-size: 1.75rem;
+    color: #0b4f6c;
+    /* Aseguramos color de marca en títulos */
 }
 
-/* ---------- Header / Nav ---------- */
+/* =========================================
+   2. HEADER & NAVIGATION
+   ========================================= */
 
 .site-header {
     display: grid;
@@ -62,6 +69,9 @@ h1 {
 
 .brand-link img {
     border-radius: 0.5rem;
+    width: 44px;
+    /* Tamaño consistente */
+    height: auto;
 }
 
 .brand-name {
@@ -104,6 +114,20 @@ h1 {
 
 .nav-list.open {
     display: block;
+    animation: menuSlide 0.3s ease-out;
+}
+
+/* Animación suave para abrir menú */
+@keyframes menuSlide {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .nav-list a {
@@ -122,12 +146,17 @@ h1 {
     background: #f4f6f8;
 }
 
-.nav-list a[aria-current="page"] {
-    background: #f4f6f8;
+/* Wayfinding: Clase activa para la página actual */
+.nav-list a.active {
+    background-color: #eef2f5;
     font-weight: 800;
+    color: #0b4f6c;
+    border-left: 4px solid #0b4f6c;
 }
 
-/* ---------- Home Page (Hero / Cards / Grid) ---------- */
+/* =========================================
+   3. HOME PAGE (HERO / CARDS / GRID)
+   ========================================= */
 
 .hero {
     position: relative;
@@ -166,6 +195,7 @@ h1 {
 .hero-content h1 {
     margin: 0;
     font-size: 1.6rem;
+    color: #ffffff;
 }
 
 .hero-content p {
@@ -207,6 +237,7 @@ h1 {
 .card h2 {
     margin: 0 0 0.75rem;
     font-size: 1.2rem;
+    color: #0b4f6c;
 }
 
 .card h3 {
@@ -223,7 +254,6 @@ h1 {
     margin: 0.4rem 0;
     color: #4b5563;
 }
-
 
 /* Weather */
 .weather-now {
@@ -242,6 +272,7 @@ h1 {
 #weather-desc {
     margin: 0;
     color: #4b5563;
+    text-transform: capitalize;
 }
 
 .forecast {
@@ -258,6 +289,8 @@ h1 {
     border-radius: 0.75rem;
     background: #ffffff;
     color: #4b5563;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Spotlights */
@@ -271,6 +304,7 @@ h1 {
     background: #ffffff;
     border-radius: 0.9rem;
     padding: 1rem;
+    text-align: center;
 }
 
 .spotlight-card h3 {
@@ -296,12 +330,15 @@ h1 {
     margin: 0.5rem 0;
 }
 
-/* ---------- Controls ---------- */
+/* =========================================
+   4. DIRECTORY PAGE (CONTROLS & MEMBERS)
+   ========================================= */
 
 .directory-controls {
     display: flex;
     gap: 0.5rem;
     margin: 0.75rem 0 1rem;
+    justify-content: center;
 }
 
 .view-btn {
@@ -310,14 +347,19 @@ h1 {
     padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
     cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.view-btn.active {
+    background: #0b4f6c;
+    color: white;
+    border-color: #0b4f6c;
 }
 
 .view-btn[aria-pressed="true"] {
     border-color: #0b4f6c;
     box-shadow: 0 0 0 2px rgba(11, 79, 108, 0.15);
 }
-
-/* ---------- Members (Grid/List) ---------- */
 
 .members {
     display: grid;
@@ -333,13 +375,15 @@ h1 {
     border: 1px solid #d9dee3;
     background: #f4f6f8;
     border-radius: 0.9rem;
-    padding: 1rem;
+    padding: 1.5rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
 }
 
 .member-card h2 {
     margin: 0.75rem 0 0.25rem;
     font-size: 1.1rem;
+    color: #0b4f6c;
 }
 
 .member-card p {
@@ -351,7 +395,6 @@ h1 {
     overflow-wrap: anywhere;
 }
 
-/* Stable layout WITHOUT forcing a fixed height (better image quality) */
 .member-card img {
     width: 100%;
     aspect-ratio: 3 / 2;
@@ -361,6 +404,7 @@ h1 {
     border: 1px solid #d9dee3;
     border-radius: 0.6rem;
     padding: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 /* List view layout */
@@ -370,41 +414,216 @@ h1 {
 
 .members.list .member-card {
     display: grid;
-    grid-template-columns: 90px 1fr;
-    gap: 0.9rem;
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
     align-items: center;
+    text-align: left;
+    background: #ffffff;
 }
 
 .members.list .member-card img {
     display: block;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
-    background: #ffffff;
-    border: 1px solid #d9dee3;
-    border-radius: 0.6rem;
-    padding: 0.25rem;
+    margin: 0;
 }
 
-/* ---------- Footer ---------- */
+/* =========================================
+   5. JOIN PAGE & FORMS (W04 NEW)
+   ========================================= */
+
+/* Estilos para formularios legibles en móvil */
+.form-section {
+    margin-bottom: 2rem;
+}
+
+form fieldset {
+    border: 1px solid #d9dee3;
+    border-radius: 8px;
+    margin: 0 0 1.5rem 0;
+    padding: 1.5rem;
+    background-color: #fcfcfc;
+}
+
+form legend {
+    color: #0b4f6c;
+    font-weight: 700;
+    padding: 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 1.2rem;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* Inputs amigables para el dedo (Touch friendly) */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    /* Más espacio para click */
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 1rem;
+}
+
+form textarea {
+    min-height: 120px;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background: #0b4f6c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form button[type="submit"]:hover {
+    background: #083a50;
+}
+
+/* --- ANIMACIÓN REQUERIDA (Punto 14 Rubrica) --- */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos de las Tarjetas de Membresía */
+.membership-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.membership-cards .card {
+    /* Reseteo y estilo específico */
+    background: #ffffff;
+    border-left: 5px solid #0b4f6c;
+    text-align: center;
+    opacity: 0;
+    /* Empiezan invisibles */
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+/* Retraso escalonado (Cascade effect) */
+.membership-cards .card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.membership-cards .card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.membership-cards .card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.membership-cards .card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.membership-cards button.card-action {
+    background: #f6ae2d;
+    border: 1px solid #daa520;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #1b1b1b;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* --- ESTILOS DEL MODAL (Dialog) --- */
+dialog {
+    border: none;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    /* Asegura que flote sobre todo */
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px);
+}
+
+#close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- THANK YOU PAGE --- */
+.thankyou-content {
+    background: #ffffff;
+    border: 1px solid #d9dee3;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
 
 .site-footer {
     margin-top: 2rem;
-    padding: 1rem;
+    padding: 2rem 1rem;
     border-top: 1px solid #d9dee3;
     background: #ffffff;
+    text-align: center;
 }
 
 .footer-columns {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .footer-title {
     font-size: 1rem;
     margin: 0 0 0.5rem;
+    font-weight: bold;
+    color: #0b4f6c;
 }
 
 .site-footer p {

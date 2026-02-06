@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber | Membership Application</title>
+    <meta name="description" content="Join our Chamber of Commerce. Membership application page.">
+    <meta name="author" content="Josue">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="brand-link">
+            <img src="images/chamber-logo.jpg" alt="Chamber Logo" width="50" height="50">
+            <div>
+                <p class="brand-name">Lehi Chamber</p>
+                <p class="brand-tagline">Connecting Business</p>
+            </div>
+        </a>
+        <button id="menuButton" class="menu-button" aria-label="Open menu">☰</button>
+        <nav class="site-nav">
+            <ul id="navList" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join-container page">
+
+        <section class="form-section">
+            <h1>Membership Application</h1>
+
+            <form method="get" action="thankyou.html" class="join-form">
+
+                <fieldset>
+                    <legend>Applicant Information</legend>
+
+                    <label>First Name*
+                        <input type="text" name="fname" required autocomplete="given-name" title="Your first name">
+                    </label>
+
+                    <label>Last Name*
+                        <input type="text" name="lname" required autocomplete="family-name" title="Your last name">
+                    </label>
+
+                    <label>Organizational Title
+                        <input type="text" name="title" pattern="[A-Za-z\s\-]{7,}"
+                            title="Must be at least 7 alpha characters, hyphens, or spaces"
+                            autocomplete="organization-title">
+                    </label>
+
+                    <label>Email Address*
+                        <input type="email" name="email" required autocomplete="email" placeholder="example@domain.com">
+                    </label>
+
+                    <label>Mobile Phone*
+                        <input type="tel" name="phone" required autocomplete="tel">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Membership & Organization</legend>
+
+                    <label>Business/Organization Name*
+                        <input type="text" name="business" required autocomplete="organization">
+                    </label>
+
+                    <label>Membership Level*
+                        <select name="membership" required>
+                            <option value="" disabled selected>Select a Level...</option>
+                            <option value="np">NP Membership (No Fee)</option>
+                            <option value="bronze">Bronze Membership</option>
+                            <option value="silver">Silver Membership</option>
+                            <option value="gold">Gold Membership</option>
+                        </select>
+                    </label>
+
+                    <label>Business Description
+                        <textarea name="description" title="Tell us about your organization"></textarea>
+                    </label>
+                </fieldset>
+
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                <button type="submit" class="submit-btn">Apply for Membership</button>
+            </form>
+        </section>
+
+        <section class="membership-cards">
+            <div class="card">
+                <h3>NP Membership</h3>
+                <p>Non-Profit Organizations</p>
+                <button type="button" class="card-action" data-level="np">Learn More</button>
+            </div>
+
+            <div class="card">
+                <h3>Bronze Membership</h3>
+                <p>Small Business Starter</p>
+                <button type="button" class="card-action" data-level="bronze">Learn More</button>
+            </div>
+
+            <div class="card">
+                <h3>Silver Membership</h3>
+                <p>Growth & Visibility</p>
+                <button type="button" class="card-action" data-level="silver">Learn More</button>
+            </div>
+
+            <div class="card">
+                <h3>Gold Membership</h3>
+                <p>Premium Executive Tier</p>
+                <button type="button" class="card-action" data-level="gold">Learn More</button>
+            </div>
+        </section>
+
+        <dialog id="membership-modal">
+            <button id="close-modal">❌</button>
+            <div id="modal-content"></div>
+        </dialog>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <div>
+                <p class="footer-title">Lehi Chamber of Commerce</p>
+                <p>123 Commerce Blvd</p>
+                <p>Lehi, UT 84043</p>
+            </div>
+            <div>
+                <p class="footer-title">Contact</p>
+                <p>info@lehichamber.org</p>
+                <p>(801) 555-1234</p>
+            </div>
+            <div>
+                <p class="footer-title">Social</p>
+                <a href="#">Facebook</a> | <a href="#">LinkedIn</a>
+            </div>
+        </div>
+        <p>
+            &copy; <span id="currentYear"></span> Josue | WDD 231 Project |
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/join.js"></script>
+</body>
+
+</html>
