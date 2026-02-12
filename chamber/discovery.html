@@ -5,25 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Lehi | Chamber of Commerce</title>
-    <meta name="description" content="Discover the best places in Lehi.">
+    <meta name="description" content="Discover the best places in Lehi and explore local attractions.">
     <meta name="author" content="Josue">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/discover.css">
 
-    <script type="module" src="scripts/discover.js" defer></script>
+    <script type="module" src="scripts/discover.js"></script>
 </head>
 
 <body>
 
     <header>
         <div class="header-container">
-            <img src="images/chamber-logo.jpg" alt="Chamber Logo" width="50" height="50">
+            <img src="images/chamber-logo.webp" alt="Lehi Chamber of Commerce Logo" width="50" height="50">
             <h1>Lehi Chamber of Commerce</h1>
+            <button id="menu-button" aria-label="Menu"></button>
         </div>
         <nav>
-            <ul>
+            <ul class="navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="discover.html" class="active">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
@@ -35,20 +36,22 @@
     <main>
         <div class="discover-layout">
 
-            <section class="visitor-info">
+            <div class="visitor-info">
                 <div id="visit-message">Loading...</div>
-            </section>
+            </div>
 
-            <section class="cards-container" id="cards-grid">
-            </section>
+            <div class="cards-container" id="cards-grid">
+            </div>
 
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 | Lehi Chamber of Commerce | Josue</p>
-        <p>WDD 231 Class Project</p>
-        <p id="lastModified"></p>
+        <div class="footer-content">
+            <p>&copy; 2026 | Lehi Chamber of Commerce | Josue</p>
+            <p>WDD 231 Class Project</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 
 </body>
