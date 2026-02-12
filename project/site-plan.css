@@ -1,0 +1,177 @@
+:root {
+    /* Color Palette - CineVault Dark Mode */
+    --primary-color: #22254b;
+    /* Very Dark Blue */
+    --secondary-color: #373b69;
+    /* Grayish Blue */
+    --accent-color: #ffa500;
+    /* Vibrant Orange */
+    --text-color: #ffffff;
+    /* White */
+    --text-secondary: #e0e0e0;
+    /* Soft White */
+
+    /* Typography */
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    /* Light background only for the PLAN DOCUMENT, for readability */
+    background-color: #f4f4f4;
+    color: #333;
+    /* Dark text for the document itself */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main container with paper sheet style */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-top: 1.5em;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+h3 {
+    border-left: 5px solid var(--accent-color);
+    padding-left: 15px;
+}
+
+p,
+li {
+    font-size: 1.1rem;
+    color: #444;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 40px 0;
+}
+
+/* --- COLOR SECTION --- */
+.colors {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+}
+
+.colors td {
+    width: 33%;
+    height: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+/* Here we apply the REAL project colors */
+.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.accent {
+    background-color: var(--accent-color);
+    color: #222;
+    /* Dark text for contrast on orange */
+}
+
+/* --- TYPOGRAPHY SECTION --- */
+.heading-font-example {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.body-font-example {
+    font-family: var(--body-font);
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* --- WIREFRAME SECTION --- */
+.wireframe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.wireframe-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.wireframe-box h4 {
+    margin-top: 0;
+}
+
+.mobile {
+    width: 300px;
+}
+
+.desktop {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Note: The .placeholder-img class is removed if you use real images, 
+   but keeping it here just in case you haven't added images yet. */
+.placeholder-img {
+    background-color: #ddd;
+    border: 2px dashed #999;
+    color: #555;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    min-height: 200px;
+}
+
+/* Document Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #666;
+    font-size: 0.9rem;
+}
