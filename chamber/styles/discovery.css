@@ -1,0 +1,91 @@
+/* --- GENERAL LAYOUT --- */
+.discover-layout {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Visitor message style (LocalStorage) */
+.visitor-info {
+    background-color: #eee;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* --- CARD GRID WITH NAMED AREAS --- */
+.cards-container {
+    display: grid;
+    gap: 20px;
+    /* We define the grid structure here using named areas.
+       The specific 'grid-area' property (card1, card2, etc.) 
+       is assigned dynamically in the JavaScript loop.
+    */
+}
+
+/* Base Card Style */
+.card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* --- MOBILE VIEW (Small) --- */
+@media screen and (max-width: 640px) {
+    .cards-container {
+        /* Single column, areas stacked vertically */
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+    }
+}
+
+/* --- TABLET VIEW (Medium: 641px - 1024px) --- */
+@media screen and (min-width: 641px) {
+    .cards-container {
+        /* Two columns using named areas */
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+}
+
+/* --- DESKTOP VIEW (Large: 1025px+) --- */
+@media screen and (min-width: 1025px) {
+    .cards-container {
+        /* Complex Named Grid Areas layout.
+           This creates a 4-column layout for larger screens.
+        */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+    }
+
+    /* HOVER EFFECT (Desktop only as per rubric) */
+    .card:hover img {
+        opacity: 0.8;
+        transform: scale(1.03);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+}
