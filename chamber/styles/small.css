@@ -42,7 +42,6 @@ h1 {
     margin: 0.25rem 0 0.75rem;
     font-size: 1.75rem;
     color: #0b4f6c;
-    /* Aseguramos color de marca en títulos */
 }
 
 /* =========================================
@@ -70,7 +69,6 @@ h1 {
 .brand-link img {
     border-radius: 0.5rem;
     width: 44px;
-    /* Tamaño consistente */
     height: auto;
 }
 
@@ -100,7 +98,6 @@ h1 {
     min-height: 0;
 }
 
-/* mobile nav is hidden by default; JS toggles .open on #navList */
 .nav-list {
     list-style: none;
     padding: 0;
@@ -117,7 +114,6 @@ h1 {
     animation: menuSlide 0.3s ease-out;
 }
 
-/* Animación suave para abrir menú */
 @keyframes menuSlide {
     from {
         transform: translateY(-10px);
@@ -146,7 +142,6 @@ h1 {
     background: #f4f6f8;
 }
 
-/* Wayfinding: Clase activa para la página actual */
 .nav-list a.active {
     background-color: #eef2f5;
     font-weight: 800;
@@ -173,7 +168,6 @@ h1 {
     display: block;
 }
 
-/* subtle overlay for text readability */
 .hero::after {
     content: "";
     position: absolute;
@@ -226,6 +220,7 @@ h1 {
     margin-top: 1rem;
 }
 
+/* ESTA ES LA ÚNICA CLASE .card EN ESTE ARCHIVO */
 .card {
     border: 1px solid #d9dee3;
     background: #f4f6f8;
@@ -352,12 +347,11 @@ h1 {
 
 .view-btn.active {
     background: #0b4f6c;
-    color: white;
-    border-color: #0b4f6c;
+    color: #ffffff;
+    border: none;
 }
 
 .view-btn[aria-pressed="true"] {
-    border-color: #0b4f6c;
     box-shadow: 0 0 0 2px rgba(11, 79, 108, 0.15);
 }
 
@@ -366,7 +360,6 @@ h1 {
     gap: 1rem;
 }
 
-/* mobile default: 1 column grid */
 .members.grid {
     grid-template-columns: 1fr;
 }
@@ -407,7 +400,6 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
-/* List view layout */
 .members.list {
     grid-template-columns: 1fr;
 }
@@ -430,10 +422,9 @@ h1 {
 }
 
 /* =========================================
-   5. JOIN PAGE & FORMS (W04 NEW)
+   5. JOIN PAGE & FORMS
    ========================================= */
 
-/* Estilos para formularios legibles en móvil */
 .form-section {
     margin-bottom: 2rem;
 }
@@ -456,11 +447,10 @@ form legend {
 form label {
     display: block;
     margin-bottom: 1.2rem;
-    color: #333;
+    color: #333333;
     font-size: 0.95rem;
 }
 
-/* Inputs amigables para el dedo (Touch friendly) */
 form input[type="text"],
 form input[type="email"],
 form input[type="tel"],
@@ -469,11 +459,10 @@ form textarea {
     display: block;
     width: 100%;
     padding: 0.8rem;
-    /* Más espacio para click */
     margin-top: 0.3rem;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 6px;
-    background-color: #fff;
+    background-color: #ffffff;
     font-size: 1rem;
 }
 
@@ -485,7 +474,7 @@ form button[type="submit"] {
     width: 100%;
     padding: 1rem;
     background: #0b4f6c;
-    color: #fff;
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     font-size: 1.1rem;
@@ -499,7 +488,6 @@ form button[type="submit"]:hover {
     background: #083a50;
 }
 
-/* --- ANIMACIÓN REQUERIDA (Punto 14 Rubrica) --- */
 @keyframes slideInUp {
     from {
         opacity: 0;
@@ -512,23 +500,19 @@ form button[type="submit"]:hover {
     }
 }
 
-/* Estilos de las Tarjetas de Membresía */
 .membership-cards {
     display: grid;
     gap: 1rem;
 }
 
 .membership-cards .card {
-    /* Reseteo y estilo específico */
     background: #ffffff;
     border-left: 5px solid #0b4f6c;
     text-align: center;
     opacity: 0;
-    /* Empiezan invisibles */
     animation: slideInUp 0.8s ease-out forwards;
 }
 
-/* Retraso escalonado (Cascade effect) */
 .membership-cards .card:nth-child(1) {
     animation-delay: 0.1s;
 }
@@ -557,7 +541,6 @@ form button[type="submit"]:hover {
     width: 100%;
 }
 
-/* --- ESTILOS DEL MODAL (Dialog) --- */
 dialog {
     border: none;
     border-radius: 12px;
@@ -566,7 +549,6 @@ dialog {
     max-width: 500px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     position: fixed;
-    /* Asegura que flote sobre todo */
 }
 
 dialog::backdrop {
@@ -579,7 +561,7 @@ dialog::backdrop {
     top: 15px;
     right: 15px;
     background: transparent;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -590,7 +572,6 @@ dialog::backdrop {
     justify-content: center;
 }
 
-/* --- THANK YOU PAGE --- */
 .thankyou-content {
     background: #ffffff;
     border: 1px solid #d9dee3;
@@ -635,7 +616,6 @@ dialog::backdrop {
     color: #0b4f6c;
 }
 
-/* ---- CLS FIX: reserve space for footer dynamic text ---- */
 #currentYear {
     display: inline-block;
     min-width: 4ch;

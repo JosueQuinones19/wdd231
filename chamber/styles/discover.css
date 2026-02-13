@@ -26,7 +26,7 @@
 }
 
 /* Base Card Style */
-.card {
+.discover-card {
     border: 1px solid #ccc;
     padding: 1rem;
     background: white;
@@ -34,7 +34,7 @@
     text-align: center;
 }
 
-.card img {
+.discover-card img {
     width: 100%;
     height: auto;
     border-radius: 4px;

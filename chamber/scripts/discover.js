@@ -8,7 +8,7 @@ function displayPlaces(data) {
     cardsGrid.innerHTML = "";
     data.forEach((place, index) => {
         const card = document.createElement("div");
-        card.classList.add("card");
+        card.classList.add("discover-card");
         card.style.gridArea = `card${index + 1}`; // Grid Areas
 
         const h2 = document.createElement("h2");
