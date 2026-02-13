@@ -1,21 +1,15 @@
-// scripts/discover.js
-
-// 1. IMPORT DATA (This replaces the fetch method)
+/* jshint esversion: 6 */
 import { places } from '../data/places.mjs';
 
-// 2. GENERATE CARDS
+// --- 1. CARDS DISPLAY ---
 const cardsGrid = document.querySelector("#cards-grid");
 
 function displayPlaces(data) {
-    cardsGrid.innerHTML = ""; // Clear existing content just in case
-    
+    cardsGrid.innerHTML = "";
     data.forEach((place, index) => {
         const card = document.createElement("div");
         card.classList.add("card");
-        
-        // Assign a specific grid-area name for CSS Grid (card1, card2, etc.)
-        // This is crucial for the responsive layout requirements
-        card.style.gridArea = `card${index + 1}`;
+        card.style.gridArea = `card${index + 1}`; // Grid Areas
 
         const h2 = document.createElement("h2");
         h2.textContent = place.title;
@@ -43,22 +37,17 @@ function displayPlaces(data) {
         card.appendChild(address);
         card.appendChild(p);
         card.appendChild(button);
-
         cardsGrid.appendChild(card);
     });
 }
-
-// Call the function to display items
 displayPlaces(places);
 
-
-// 3. VISITOR MESSAGE (LocalStorage)
+// --- 2. VISITOR MESSAGE ---
 const visitMessage = document.querySelector("#visit-message");
 const lastVisit = localStorage.getItem("lastVisit");
-const now = Date.now(); // Current timestamp in milliseconds
+const now = Date.now();
 
 if (!lastVisit) {
-    // First visit
     visitMessage.textContent = "Welcome! Let us know if you have any questions.";
 } else {
     const msPerDay = 24 * 60 * 60 * 1000;
@@ -72,6 +61,23 @@ if (!lastVisit) {
         visitMessage.textContent = `You last visited ${daysDiff} ${dayWord} ago.`;
     }
 }
-
-// Store current date for next visit
 localStorage.setItem("lastVisit", now);
+
+
+// --- 3. MENU LOGIC (UPDATED FOR NEW HEADER IDs) ---
+// CAMBIO CLAVE: Usamos 'menuButton' y 'navList' para coincidir con tu HTML
+const hamButton = document.querySelector('#menuButton');
+const navigation = document.querySelector('#navList');
+
+if (hamButton && navigation) {
+    hamButton.addEventListener('click', () => {
+        navigation.classList.toggle('open');
+        hamButton.classList.toggle('open');
+    });
+}
+
+// --- 4. FOOTER DATE ---
+const lastModified = document.querySelector("#lastModified");
+if (lastModified) {
+    lastModified.textContent = `Last Modification: ${document.lastModified}`;
+}
