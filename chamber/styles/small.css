@@ -332,7 +332,7 @@ form button[type="submit"],
 .view-btn.active {
     background: var(--primary);
     color: #ffffff;
-    border-color: var(--primary);
+    border: 1px solid transparent;
 }
 
 .members {
