@@ -303,3 +303,11 @@ footer {
 .contact-form button[type="submit"]:hover {
     background-color: #e59d1c;
 }
+
+/* =========================================
+   8. ATTRIBUTIONS CARD
+   ========================================= */
+.attributions-card {
+    padding: 2rem;
+    margin-top: 2rem;
+}
