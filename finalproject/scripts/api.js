@@ -1,7 +1,3 @@
-/*jshint esversion: 8 */
-
-export async function getDestinations() {
-
 // scripts/api.js
 
 // Usamos 'export' para cumplir con el requisito de ES Modules
