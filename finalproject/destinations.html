@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | Wanderlust Travel Guide</title>
+    <meta name="description" content="Explore our top 15 travel destinations around the world.">
+    <meta name="author" content="Josue">
+
+    <meta property="og:title" content="Destinations | Wanderlust Travel Guide">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://josuequinones19.github.io/wdd231/finalproject/images/destinations-bg.webp">
+    <meta property="og:url" content="https://josuequinones19.github.io/wdd231/finalproject/destinations.html">
+    <meta property="og:description" content="Explore our top 15 travel destinations around the world.">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="Wanderlust Travel Logo" width="50" height="50">
+            <span>Wanderlust Guide</span>
+        </div>
+        <button id="menu-button" aria-label="Toggle Menu">☰</button>
+    </header>
+
+    <nav>
+        <ul id="nav-list" class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html" class="active">Destinations</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Our Top Destinations</h1>
+
+        <div id="destinations-grid"></div>
+
+        <dialog id="destination-modal">
+            <h2 id="modal-title">Destination Details</h2>
+            <p id="modal-description"></p>
+            <p id="modal-best-time"></p>
+            <button id="close-modal">Close</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Wanderlust Travel Guide | Josue</p>
+        <p id="lastModified"></p>
+        <div class="footer-links">
+            <a href="attributions.html">Attributions</a> |
+            <a href="https://youtube.com" target="_blank">Project Video Demonstration</a>
+        </div>
+    </footer>
+</body>
+
+</html>

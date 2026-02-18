@@ -1,0 +1,124 @@
+{
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Kyoto",
+      "country": "Japan",
+      "description": "Experience traditional temples, serene gardens, and beautiful cherry blossoms.",
+      "image": "images/kyoto.webp",
+      "bestTimeToVisit": "Spring (March-May)"
+    },
+    {
+      "id": 2,
+      "name": "Santorini",
+      "country": "Greece",
+      "description": "Stunning white-washed buildings, blue domes, and breathtaking sunsets over the Aegean Sea.",
+      "image": "images/santorini.webp",
+      "bestTimeToVisit": "Summer (June-August)"
+    },
+    {
+      "id": 3,
+      "name": "Machu Picchu",
+      "country": "Peru",
+      "description": "An ancient Incan citadel set high in the Andes Mountains. A hiker's paradise.",
+      "image": "images/machu-picchu.webp",
+      "bestTimeToVisit": "Dry Season (May-October)"
+    },
+    {
+      "id": 4,
+      "name": "Banff National Park",
+      "country": "Canada",
+      "description": "Crystal clear turquoise lakes surrounded by the majestic Rocky Mountains.",
+      "image": "images/banff.webp",
+      "bestTimeToVisit": "Summer or Winter for skiing"
+    },
+    {
+      "id": 5,
+      "name": "Rome",
+      "country": "Italy",
+      "description": "A living museum of ancient history, world-class art, and incredible cuisine.",
+      "image": "images/rome.webp",
+      "bestTimeToVisit": "Fall (September-November)"
+    },
+    {
+      "id": 6,
+      "name": "Maui",
+      "country": "USA",
+      "description": "Tropical paradise known for its volcanic beaches, waterfalls, and the Road to Hana.",
+      "image": "images/maui.webp",
+      "bestTimeToVisit": "Spring or Fall"
+    },
+    {
+      "id": 7,
+      "name": "Bora Bora",
+      "country": "French Polynesia",
+      "description": "Luxurious overwater bungalows and a vibrant turquoise lagoon perfect for snorkeling.",
+      "image": "images/borabora.webp",
+      "bestTimeToVisit": "Winter (May-October)"
+    },
+    {
+      "id": 8,
+      "name": "Swiss Alps",
+      "country": "Switzerland",
+      "description": "Dramatic peaks, charming alpine villages, and world-class skiing resorts.",
+      "image": "images/swiss-alps.webp",
+      "bestTimeToVisit": "Winter (December-March)"
+    },
+    {
+      "id": 9,
+      "name": "Petra",
+      "country": "Jordan",
+      "description": "The famous 'Rose City' carved directly into vibrant red sandstone cliff faces.",
+      "image": "images/petra.webp",
+      "bestTimeToVisit": "Spring or Autumn"
+    },
+    {
+      "id": 10,
+      "name": "Maldives",
+      "country": "Maldives",
+      "description": "A tropical nation in the Indian Ocean known for its beaches, blue lagoons, and extensive reefs.",
+      "image": "images/maldives.webp",
+      "bestTimeToVisit": "Dry Season (November-April)"
+    },
+    {
+      "id": 11,
+      "name": "Phuket",
+      "country": "Thailand",
+      "description": "Rainforested, mountainous island in the Andaman Sea with some of Thailand’s most popular beaches.",
+      "image": "images/phuket.webp",
+      "bestTimeToVisit": "Winter (November-February)"
+    },
+    {
+      "id": 12,
+      "name": "Grand Canyon",
+      "country": "USA",
+      "description": "One of the world's natural wonders, featuring layered bands of red rock revealing millions of years of geological history.",
+      "image": "images/grand-canyon.webp",
+      "bestTimeToVisit": "Spring or Fall"
+    },
+    {
+      "id": 13,
+      "name": "Cape Town",
+      "country": "South Africa",
+      "description": "A port city beneath the sweeping views of Table Mountain, famous for its harbor and beautiful flora.",
+      "image": "images/cape-town.webp",
+      "bestTimeToVisit": "Summer (December-February)"
+    },
+    {
+      "id": 14,
+      "name": "Reykjavik",
+      "country": "Iceland",
+      "description": "The gateway to Iceland's dramatic landscapes of volcanoes, geysers, hot springs and lava fields.",
+      "image": "images/reykjavik.webp",
+      "bestTimeToVisit": "Summer (June-August)"
+    },
+    {
+      "id": 15,
+      "name": "Paris",
+      "country": "France",
+      "description": "The global center for art, fashion, gastronomy, and culture, home to the iconic Eiffel Tower.",
+      "image": "images/paris.webp",
+      "bestTimeToVisit": "Spring (April-June)"
+    }
+  ]
+}

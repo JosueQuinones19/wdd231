@@ -1,0 +1,70 @@
+/* =========================================
+   larger.css (Tablet & Desktop Overrides)
+   ========================================= */
+
+@media screen and (min-width: 40rem) {
+
+    /* 1. Header y Navegación Horizontal */
+    header {
+        padding: 1rem 2rem;
+    }
+
+    #menu-button {
+        display: none;
+        /* Adiós hamburguesa */
+    }
+
+    .nav-list {
+        display: flex;
+        background-color: transparent;
+        justify-content: flex-end;
+    }
+
+    .nav-list li a {
+        border: none;
+        color: var(--primary-color);
+        padding: 0.5rem 1rem;
+        margin-left: 0.5rem;
+    }
+
+    .nav-list li a:hover {
+        background-color: var(--bg-light);
+        border-radius: 4px;
+    }
+
+    .nav-list li a.active {
+        border-radius: 4px;
+    }
+
+    /* 2. Main Layouts más espaciosos */
+    main {
+        padding: 2rem;
+    }
+
+    .hero {
+        padding: 4rem 2rem;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* 3. Grid Automático para Tarjetas (Rúbrica: Proficient Layout) */
+    #destinations-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .destination-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .destination-card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .view-more-btn:hover {
+        background-color: #083a50;
+    }
+}

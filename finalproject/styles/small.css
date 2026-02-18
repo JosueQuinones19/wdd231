@@ -1,0 +1,230 @@
+/* =========================================
+   1. VARIABLES & RESET (small.css)
+   ========================================= */
+:root {
+    --primary-color: #0b4f6c;
+    --accent-color: #f6ae2d;
+    --text-dark: #1b1b1b;
+    --text-light: #4b5563;
+    --bg-light: #f4f6f8;
+    --bg-white: #ffffff;
+    --border-color: #d9dee3;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================
+   2. HEADER & MOBILE MENU
+   ========================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+#menu-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Menú oculto por defecto */
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.nav-list.open {
+    display: block;
+}
+
+.nav-list li a {
+    display: block;
+    padding: 1rem;
+    color: var(--bg-white);
+    text-decoration: none;
+    font-weight: 700;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-list li a.active {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+}
+
+/* =========================================
+   3. MAIN LAYOUTS & HERO
+   ========================================= */
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hero {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* =========================================
+   4. DESTINATIONS GRID (Mobile: 1 columna)
+   ========================================= */
+#destinations-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.destination-card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.destination-card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.card-content p {
+    margin: 0 0 1rem 0;
+    color: var(--text-light);
+    flex-grow: 1;
+}
+
+.view-more-btn {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    width: 100%;
+}
+
+/* =========================================
+   5. MODAL DIALOG
+   ========================================= */
+dialog {
+    border: none;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+}
+
+dialog h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+#close-modal {
+    margin-top: 1.5rem;
+    background-color: var(--text-dark);
+    color: var(--bg-white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
+footer {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 0 0.5rem;
+}

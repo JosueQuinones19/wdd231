@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Wanderlust Travel Guide</title>
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="Wanderlust Travel Logo" width="50" height="50">
+            <span>Wanderlust Guide</span>
+        </div>
+        <button id="menu-button" aria-label="Toggle Menu">☰</button>
+    </header>
+
+    <nav>
+        <ul id="nav-list" class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Thank You For Reaching Out!</h1>
+        <div
+            style="background: var(--bg-white); padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color); max-width: 600px; margin: 0 auto;">
+            <h2>Here is the information you submitted:</h2>
+            <div id="form-results" style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 1.8;">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Wanderlust Travel Guide | Josue</p>
+        <p id="lastModified"></p>
+        <div class="footer-links">
+            <a href="attributions.html">Attributions</a> |
+            <a href="https://youtube.com" target="_blank">Project Video Demonstration</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUrl = window.location.href;
+            const everything = currentUrl.split('?');
+            const resultsContainer = document.getElementById('form-results');
+
+            if (everything.length > 1) {
+                let formData = everything[1].split('&');
+                let htmlOutput = '<ul>';
+
+                formData.forEach((item) => {
+                    let keyValuePair = item.split('=');
+                    // Limpiamos los caracteres raros de la URL (como %20 para espacios)
+                    let key = decodeURIComponent(keyValuePair[0]).replace('-', ' ');
+                    let value = decodeURIComponent(keyValuePair[1]).replace(/\+/g, ' ');
+
+                    htmlOutput += `<li><strong>${key.toUpperCase()}:</strong> ${value}</li>`;
+                });
+
+                htmlOutput += '</ul>';
+                resultsContainer.innerHTML = htmlOutput;
+            } else {
+                resultsContainer.innerHTML = '<p>No data was submitted.</p>';
+            }
+        });
+    </script>
+</body>
+
+</html>
