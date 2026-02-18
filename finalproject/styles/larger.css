@@ -16,15 +16,19 @@
 
     .nav-list {
         display: flex;
-        background-color: transparent;
+        background-color: var(--bg-white);
+        /* Color sólido en lugar de transparente */
         justify-content: flex-end;
     }
 
     .nav-list li a {
         border: none;
         color: var(--primary-color);
+        background-color: var(--bg-white);
+        /* Color sólido */
         padding: 0.5rem 1rem;
         margin-left: 0.5rem;
+        font-weight: 700;
     }
 
     .nav-list li a:hover {
@@ -33,6 +37,8 @@
     }
 
     .nav-list li a.active {
+        background-color: var(--primary-color);
+        color: var(--bg-white);
         border-radius: 4px;
     }
 
@@ -67,22 +73,4 @@
     .view-more-btn:hover {
         background-color: #083a50;
     }
-}
-
-/* =========================================
-       ACCESSIBILITY FIXES (Lighthouse Desktop)
-       ========================================= */
-/* Fuerza a que el menú de escritorio tenga un fondo claro sólido en lugar de transparente para no confundir a Lighthouse */
-.nav-list {
-    background-color: var(--bg-white) !important;
-}
-
-.nav-list li a {
-    color: var(--primary-color) !important;
-    font-weight: bold !important;
-}
-
-.nav-list li a.active {
-    background-color: var(--primary-color) !important;
-    color: #ffffff !important;
 }
