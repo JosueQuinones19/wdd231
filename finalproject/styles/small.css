@@ -228,3 +228,31 @@ footer {
     text-decoration: none;
     margin: 0 0.5rem;
 }
+
+/* =========================================
+   ACCESSIBILITY FIXES (Lighthouse Mobile)
+   ========================================= */
+/* Fuerza a que cualquier texto en contenedores oscuros sea 100% blanco */
+.hero,
+.hero h2,
+.hero p,
+footer,
+footer p,
+footer span,
+.view-more-btn {
+    color: #ffffff !important;
+}
+
+/* Fuerza el contraste seguro del menú móvil */
+.nav-list {
+    background-color: var(--primary-color) !important;
+}
+
+.nav-list li a {
+    color: #ffffff !important;
+}
+
+.nav-list li a.active {
+    background-color: #ffffff !important;
+    color: var(--primary-color) !important;
+}
