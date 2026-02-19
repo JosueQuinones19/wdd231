@@ -1,15 +1,20 @@
 // scripts/main.js
 
-// 1. ES MODULES: Importamos la función de nuestro otro archivo
+// 1. Modulo
 import { getDestinations } from './api.js';
 
-// ==========================================
-// CONFIGURACIÓN BÁSICA (Menú y Fechas)
-// ==========================================
+
 document.addEventListener('DOMContentLoaded', () => {
     // Fechas del Footer
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = `Last Modification: ${document.lastModified}`;
+    const currentYearEl = document.getElementById('currentYear');
+    const lastModifiedEl = document.getElementById('lastModified');
+
+    if (currentYearEl) {
+        currentYearEl.textContent = new Date().getFullYear();
+    }
+    if (lastModifiedEl) {
+        lastModifiedEl.textContent = `Last Modification: ${document.lastModified}`;
+    }
 
     // Menú Hamburguesa Responsivo
     const menuButton = document.getElementById('menu-button');
@@ -25,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // LOCAL STORAGE: Contador de Visitas
     // ==========================================
-    const visitsDisplay = document.querySelector('.visits-counter');
     let numVisits = Number(window.localStorage.getItem('wanderlust-visits-ls')) || 0;
     
     if (numVisits !== 0) {
@@ -63,8 +67,9 @@ async function displayDestinations() {
         card.classList.add('destination-card');
 
         // Construir HTML interno
+        // CAMBIO AQUÍ: Agregamos width="400" y height="225" para mejorar el Performance (CLS)
         card.innerHTML = `
-            <img src="${dest.image}" alt="Image of ${dest.name}" loading="lazy">
+            <img src="${dest.image}" alt="Image of ${dest.name}" loading="lazy" width="400" height="225">
             <div class="card-content">
                 <h3>${dest.name}</h3>
                 <p><strong>${dest.country}</strong></p>
