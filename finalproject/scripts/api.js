@@ -1,6 +1,6 @@
 // scripts/api.js
 
-// Usamos 'export' para cumplir con el requisito de ES Modules
+// Use 'export' para cumplir con el requisito de la rubrica
 export async function getDestinations() {
     const url = 'data/destinations.json';
     

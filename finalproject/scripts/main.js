@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('wanderlust-visits-ls', numVisits);
 
     // ==========================================
-    // RENDERIZAR DESTINOS Y MANEJAR MODAL
+    // Renderizar destinos y manejarENDERIZAR DESTINOS Y MANEJAR MODAL
     // ==========================================
     // Solo ejecutamos esto si estamos en la página que tiene la cuadrícula
     const gridContainer = document.getElementById('destinations-grid');
