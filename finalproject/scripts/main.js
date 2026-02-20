@@ -5,7 +5,7 @@ import { getDestinations } from './api.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Fechas del Footer
+    // Footer Dates
     const currentYearEl = document.getElementById('currentYear');
     const lastModifiedEl = document.getElementById('lastModified');
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lastModifiedEl.textContent = `Last Modification: ${document.lastModified}`;
     }
 
-    // Menú Hamburguesa Responsivo
+    // Hamburger Menu
     const menuButton = document.getElementById('menu-button');
     const navList = document.getElementById('nav-list');
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // LOCAL STORAGE: Contador de Visitas
+    // LOCAL STORAGE: Visits to the website
     // ==========================================
     let numVisits = Number(window.localStorage.getItem('wanderlust-visits-ls')) || 0;
     
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('wanderlust-visits-ls', numVisits);
 
     // ==========================================
-    // Renderizar destinos y manejarENDERIZAR DESTINOS Y MANEJAR MODAL
+    // Renderizar destinos y manejar
     // ==========================================
     // Solo ejecutamos esto si estamos en la página que tiene la cuadrícula
     const gridContainer = document.getElementById('destinations-grid');
